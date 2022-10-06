@@ -179,8 +179,6 @@ public class Basics {
          *                You can index into arrays as we do in Python
          *                (e.g. arr[i] gives you the item at index i).
          */
-        int count = 0;
-
         if (arr.length != 0) {
             for (int i = 0; i < arr.length; i++) {
                 if (i % 2 == 1) {
