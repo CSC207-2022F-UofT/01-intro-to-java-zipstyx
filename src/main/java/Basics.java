@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+
 /**
  * This file contains a few exercises to familiarize you with Java.
  * You should read this file from top-to-bottom. Any tasks you are to complete
@@ -40,9 +42,10 @@ public class Basics {
          */
         System.out.println(7 + 5);
 
-        /* TODO (Task 1): Write a line of code below that prints the string
+        /*  (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
+        System.out.println("Hello World!");
 
 
 
@@ -59,9 +62,10 @@ public class Basics {
          */
 
         /*
-         * TODO (Task 2): Create a variable named my_variable and assign it the
+         *  (Task 2): Create a variable named my_variable and assign it the
          *                value 100.
          */
+        int my_variable = 100;
 
 
 
@@ -88,7 +92,7 @@ public class Basics {
          */
 
         /*
-         * TODO (Task 3): Create a for-loop that loops from 10 to 0, printing
+         *  (Task 3): Create a for-loop that loops from 10 to 0, printing
          *                the following at each iteration:
          *                Current count: #
          *
@@ -99,6 +103,9 @@ public class Basics {
          * Current count: 1
          * Current count: 0
          */
+        for (int i = 10; i >= 0; i--) {
+            System.out.println(i);
+        }
 
 
     }
@@ -133,7 +140,7 @@ public class Basics {
      * @return           The first letter of every word in to_split
      */
     public static String split(String to_split) {
-        /* TODO (Task 4): Complete this method body.
+        /*  (Task 4): Complete this method body.
          *                The String methods .split and .charAt may be helpful,
          *                along with the StringBuilder.append
          *                You may also assume that to_split always has 7 words
@@ -141,6 +148,10 @@ public class Basics {
          *                you may use them if you wish.
          */
         StringBuilder ret = new StringBuilder();
+        String[] splitStr = to_split.split(" ");
+        for (String k: splitStr) {
+            ret.append(k.charAt(0));
+        }
 
         // Fill in the rest of the body here
 
@@ -164,14 +175,27 @@ public class Basics {
     public static int oddSum(int[] arr) {
         int current_sum = 0;
 
-        /* TODO (Task 5): Complete this method body using a for-loop.
+        /*  (Task 5): Complete this method body using a for-loop.
          *                You can find the length of an array by using the
          *                .length attribute (e.g. arr.length)
          *                You can index into arrays as we do in Python
          *                (e.g. arr[i] gives you the item at index i).
          */
+        int count = 0;
 
-        return current_sum;
+        if (arr.length != 0) {
+            for (int i = 0; i < arr.length; i++) {
+                if (i % 2 == 1) {
+                    current_sum += (int) Array.get(arr, i);
+                }
+            }
+
+            return current_sum;
+        }
+
+        else {
+            return 0;
+        }
     }
 
 
