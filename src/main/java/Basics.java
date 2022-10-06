@@ -102,7 +102,7 @@ public class Basics {
          * Current count: 0
          */
         for (int i = 10; i >= 0; i--) {
-            System.out.printf("Current count: %d%n", i);
+            System.out.printf(String.format("Current count: %d", i));
         }
 
 
