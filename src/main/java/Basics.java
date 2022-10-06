@@ -1,5 +1,3 @@
-import java.lang.reflect.Array;
-
 /**
  * This file contains a few exercises to familiarize you with Java.
  * You should read this file from top-to-bottom. Any tasks you are to complete
@@ -186,7 +184,7 @@ public class Basics {
         if (arr.length != 0) {
             for (int i = 0; i < arr.length; i++) {
                 if (i % 2 == 1) {
-                    current_sum += (int) Array.get(arr, i);
+                    current_sum += arr[i];
                 }
             }
 
